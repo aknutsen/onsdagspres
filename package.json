@@ -31,12 +31,16 @@
     "karma": "^0.12.28",
     "karma-jasmine": "^0.3.2",
     "karma-phantomjs-launcher": "^0.1.4",
-    "grunt-karma": "^0.9.0"
+    "grunt-karma": "^0.9.0",
+    "grunt-protractor-runner": "^1.1.4",
+    "grunt-protractor-webdriver": "^0.2.0",
+    "protractor": "^1.5.0"
   },
   "engines": {
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "install": "node node_modules/protractor/bin/webdriver-manager update"
   }
 }
