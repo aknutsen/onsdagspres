@@ -1,0 +1,11 @@
+<div class="jumbotron">
+  <h1>Yo{{firstName().length > 0 ? ', ' : '!'}} {{ firstName() }}</h1>
+  <p class="lead">
+    <input type="text" ng-model="name" id="nameInput">
+  </p>
+  <button class="btn btn-success" ng-click="guessLastName()" id="guessBtn">Let me guess your second name!</button>
+  
+  <h2>
+    {{lastName}}
+  </h2>
+</div>
