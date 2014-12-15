@@ -19,10 +19,13 @@ angular.module('cidemoApp')
     	$scope.lastName = 'Please wait while I\'m guessing';
 	    $timeout(function() {
 	    	var parts = $scope.name.split(' ');
-	    	if (parts.length > 1)
+	    	if (parts.length > 1) {
 	    		$scope.lastName = 'Must be ' +parts[parts.length-1]+'!';
-	    	else
-	    		$scope.lastName = 'Maybe Lee?';
+        }
+	    	else {
+          $scope.lastName = 'Maybe Lee?';
+        }
+	    		
 	    }, 1300);
 	  };
   });

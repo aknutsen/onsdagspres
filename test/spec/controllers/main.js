@@ -3,7 +3,7 @@
 describe('Controller: MainCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('onsdagspresApp'));
+  beforeEach(module('cidemoApp'));
 
   var MainCtrl,
     scope;
@@ -16,7 +16,17 @@ describe('Controller: MainCtrl', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(scope.awesomeThings.length).toBe(3);
+  it('should return empty string for firstName when initialized', function () {
+    expect(scope.firstName()).toBe('');
+  });
+
+  it('should return the complete string when name is one word', function () {
+    scope.name = 'John';
+    expect(scope.firstName()).toBe('John');
+  });
+
+  it('should return the first name only when name and surname is specified', function () {
+    scope.name = 'John Doe';
+    expect(scope.firstName()).toBe('John');
   });
 });
